@@ -164,3 +164,4 @@ npm run build
 ```
 
 The build outputs the static site to the `build` directory.
+# walletauth
