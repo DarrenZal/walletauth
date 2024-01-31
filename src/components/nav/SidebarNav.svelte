@@ -4,10 +4,12 @@
   import { sessionStore } from '$src/stores'
   import About from '$components/icons/About.svelte'
   import BrandLogo from '$components/icons/BrandLogo.svelte'
+  import BrandWordmark from '$components/icons/BrandWordmark.svelte'
   import Home from '$components/icons/Home.svelte'
   import PhotoGallery from '$components/icons/PhotoGallery.svelte'
   import Settings from '$components/icons/Settings.svelte'
   import NavItem from '$components/nav/NavItem.svelte'
+  import Chat from '$components/icons/Chat.svelte'
 
   const navItemsUpper = [
     {
@@ -16,10 +18,15 @@
       icon: Home
     },
     {
+      label: 'Chat',
+      href: '/Chat',
+      icon: Chat
+    },
+    /* {
       label: 'Photo Gallery Demo',
       href: '/gallery/',
       icon: PhotoGallery
-    },
+    }, */
     {
       label: 'Account Settings',
       href: '/settings/',
@@ -69,6 +76,7 @@
           }}
         >
           <BrandLogo />
+          <BrandWordmark />
         </button>
 
         <!-- Upper Menu -->

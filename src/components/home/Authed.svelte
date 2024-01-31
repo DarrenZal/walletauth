@@ -15,11 +15,21 @@
   <h1 class="text-xl">Welcome, <span class="font-bold uppercase">{start_and_end($sessionStore.address)}</span>!</h1>
 
   <div class="flex flex-col items-start justify-center gap-5">
-    <h2 class="text-lg">Photo Gallery Demo</h2>
+    <h2 class="text-lg">ReFi Chat</h2>
     <p>
-      The ODD SDK makes it easy to implement private, encrypted, user-owned
-      storage in your app. See it in action with our photo gallery demo.
+      ReFi Chat is a chatbot that answers questions about Regenerative Finance (ReFi).<br>
+      It combines a knowledge graph with a Large Language Model to provide verifiable answers.
+      Previous prompts and replies are not kept in context for new prompts, to save costs.<br>
+      Feel free to <a class="blue-link" href="/Chat">Submit Feedback</a> directly in the app, or reach out to <a class="blue-link" href="https://twitter.com/zaldarren" target="_blank" rel="noreferrer">Darren Zal</a>.<br>
+      Check out the code on <a class="blue-link" href="https://github.com/DarrenZal/NatLangKG" target="_blank" rel="noreferrer">GitHub</a>
     </p>
-    <a class="btn btn-primary" href="/gallery">Try the Photo Gallery Demo</a>
+    <a class="btn btn-primary" href="/Chat">Try ReFi Chat</a>
   </div>
 </div>
+<style>
+  .blue-link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+</style>

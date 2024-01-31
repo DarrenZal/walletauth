@@ -4,9 +4,11 @@
   import { DEFAULT_THEME_KEY, storeTheme, type ThemeOptions } from '$lib/theme'
   import Avatar from '$components/settings/Avatar.svelte'
   import BrandLogo from '$components/icons/BrandLogo.svelte'
+  import BrandWordmark from '$components/icons/BrandWordmark.svelte'
   import DarkMode from '$components/icons/DarkMode.svelte'
   import Hamburger from '$components/icons/Hamburger.svelte'
   import LightMode from '$components/icons/LightMode.svelte'
+  import { disconnect, copyAddressToClipboard, initialise } from '$lib/session'
 
   const setTheme = (newTheme: ThemeOptions) => {
     localStorage.setItem(DEFAULT_THEME_KEY, 'false')
@@ -36,6 +38,7 @@
         <BrandLogo />
     </button>
     {/if}
+
   </div>
 
   <!-- Even if the user is not authed, render this header in the connection flow -->
@@ -45,11 +48,15 @@
       on:click={() => goto('/')}
     >
       <BrandLogo />
+      <div class="hidden lg:inline-block">
+        <BrandWordmark />
+      </div>
     </button>
   {/if}
 
   <div class="ml-auto flex items-center gap-2">
     {#if $sessionStore.authed}
+    <button on:click={disconnect} class="inline-block text-right">Disconnect</button>
       <a href="/settings">
         <Avatar size="small" />
       </a>
@@ -65,4 +72,5 @@
       </button>
     {/if}
   </div>
+
 </header>
